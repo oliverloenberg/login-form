@@ -39,20 +39,19 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 6px;
   border: 1.5px solid rgba(0, 0, 0, 0.2);
   width: 80vw;
-  /* height: 70vh; */
 }
 
 label {
   font-size: 1rem;
-  margin: 1rem 0 0.2rem 0;
+  margin: 1rem 0 0.2rem 2.6rem;
 }
 
 input {
-  margin: 0 0 0.5rem 0;
+  margin: 0 auto 0.5rem auto;
   border: none;
   border-bottom: 1px solid grey;
   padding: 2px 2px;
@@ -61,10 +60,36 @@ input {
   font-size: 1rem;
   background: white;
   appearance: none;
+  width: 70%;
+}
+
+input:invalid {
+  border-bottom: 1px solid rgb(228, 0, 0);
+}
+
+select {
+  margin: 0 auto 0.5rem auto;
+  border: none;
+  border-bottom: 1px solid grey;
+  padding: 2px 2px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 71%;
 }
 
 .tip {
   /* margin: 0.5rem 0; */
+  font-size: 0.8rem;
+  transition: all 200ms ease-in;
+  margin-left: 2.6rem;
+  font-style: italic;
+}
+
+.final-tip {
+  margin: 0.5rem auto;
+  font-style: italic;
+  font-size: 0.8rem;
   transition: all 200ms ease-in;
 }
 
@@ -76,8 +101,47 @@ input {
   opacity: 1;
 }
 
+.fade-out {
+  opacity: 0;
+}
+
+.password {
+  border-bottom: 1px solid grey;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 71%;
+}
+
+.red-bottom-border {
+  border-bottom: 1px solid rgb(228, 0, 0);
+}
+
+.eye {
+  display: flex;
+  align-items: center;
+}
+
+.eye img {
+  width: 26px;
+  height: 26px;
+}
+
+#password-input {
+  border-bottom: none;
+  margin: 0 0;
+  width: 85%;
+}
+
+#password-confirmation-input {
+  border-bottom: none;
+  margin: 0 0;
+  width: 85%;
+}
+
 button {
-  margin: 1rem 0;
+  margin: 0.5rem auto;
   border: 1.5px solid rgba(0, 0, 0, 0.3);
   padding: 0.5rem 1rem;
   background-color: white;
@@ -87,6 +151,50 @@ button {
 button:hover {
   color: white;
   background-color: black;
+}
+
+.invalid {
+  border-bottom: 1px solid rgb(228, 0, 0);
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0.5rem;
+  }
+
+  form {
+    width: 60vw;
+    height: 70vh;
+  }
+
+  label {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 1.3rem;
+    width: 78%;
+  }
+
+  select {
+    width: 79%;
+  }
+
+  .password {
+    width: 78%;
+  }
+
+  .tip {
+    margin-top: 0.2rem;
+    margin-left: 3rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 1rem 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -100,21 +208,72 @@ button:hover {
 
   form {
     width: 30vw;
+    height: 70vh;
   }
 
   label {
     font-size: 1.2rem;
-    margin: 1rem 0 0.2rem 0;
+    margin: 1rem 0 0.2rem 3rem;
   }
 
   input {
-    margin: 0 0 0.5rem 0;
+    margin: 0 auto 0.5rem auto;
     border: none;
     border-bottom: 1px solid grey;
     padding: 2px 2px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    width: 50%;
+    width: 71%;
+  }
+
+  select {
+    width: 72%;
+  }
+
+  .tip {
+    margin-left: 3.1rem;
+  }
+}
+
+@media only screen and (min-width: 1439px) {
+  form {
+    width: 25vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  form {
+    width: 20vw;
+  }
+
+  input {
+    width: 74%;
+  }
+
+  select {
+    width: 75%;
+  }
+
+  .password {
+    width: 74%;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  form {
+    height: 55vh;
+  }
+
+  input {
+    width: 79%;
+  }
+
+  select {
+    width: 80%;
+  }
+
+  .password {
+    width: 79%;
   }
 }
