@@ -148,7 +148,7 @@ button {
   transition: all 200ms ease-in-out;
 }
 
-button:hover {
+.hover-effect:hover {
   color: white;
   background-color: black;
 }
